@@ -27,25 +27,28 @@ namespace MemoryGame
             InitializeComponent();
             OPlayer.Name = name;
             SIZE = size;
-            BackgroundImageS = new List<Card>();
-            BackgroundImageS.Add(new Card() { Path = @"C:\Users\mehdi\Desktop\MemoryGame\MemoryGame\Resources\Card1.png" });
-            BackgroundImageS.Add(new Card() { Path = @"C:\Users\mehdi\Desktop\MemoryGame\MemoryGame\Resources\Card2.png" });
-            BackgroundImageS.Add(new Card() { Path = @"C:\Users\mehdi\Desktop\MemoryGame\MemoryGame\Resources\Card3.png" });
-            BackgroundImageS.Add(new Card() { Path = @"C:\Users\mehdi\Desktop\MemoryGame\MemoryGame\Resources\Card4.png" });
-            BackgroundImageS.Add(new Card() { Path = @"C:\Users\mehdi\Desktop\MemoryGame\MemoryGame\Resources\Card5.png" });
-            BackgroundImageS.Add(new Card() { Path = @"C:\Users\mehdi\Desktop\MemoryGame\MemoryGame\Resources\Card6.png" });
-            BackgroundImageS.Add(new Card() { Path = @"C:\Users\mehdi\Desktop\MemoryGame\MemoryGame\Resources\Card7.png" });
-            BackgroundImageS.Add(new Card() { Path = @"C:\Users\mehdi\Desktop\MemoryGame\MemoryGame\Resources\Card8.png" });
-            BackgroundImageS.Add(new Card() { Path = @"C:\Users\mehdi\Desktop\MemoryGame\MemoryGame\Resources\Card9.png" });
-            BackgroundImageS.Add(new Card() { Path = @"C:\Users\mehdi\Desktop\MemoryGame\MemoryGame\Resources\Card10.png" });
-            BackgroundImageS.Add(new Card() { Path = @"C:\Users\mehdi\Desktop\MemoryGame\MemoryGame\Resources\Card11.png" });
-            BackgroundImageS.Add(new Card() { Path = @"C:\Users\mehdi\Desktop\MemoryGame\MemoryGame\Resources\Card12.png" });
-            BackgroundImageS.Add(new Card() { Path = @"C:\Users\mehdi\Desktop\MemoryGame\MemoryGame\Resources\Card13.png" });
-            BackgroundImageS.Add(new Card() { Path = @"C:\Users\mehdi\Desktop\MemoryGame\MemoryGame\Resources\Card14.png" });
-            BackgroundImageS.Add(new Card() { Path = @"C:\Users\mehdi\Desktop\MemoryGame\MemoryGame\Resources\Card15.png" });
-            BackgroundImageS.Add(new Card() { Path = @"C:\Users\mehdi\Desktop\MemoryGame\MemoryGame\Resources\Card16.png" });
-            BackgroundImageS.Add(new Card() { Path = @"C:\Users\mehdi\Desktop\MemoryGame\MemoryGame\Resources\Card17.png" });
-            BackgroundImageS.Add(new Card() { Path = @"C:\Users\mehdi\Desktop\MemoryGame\MemoryGame\Resources\Card18.png" });
+            string CurrentDirectory = Environment.CurrentDirectory;
+            int CurrentDirectoryLength = Environment.CurrentDirectory.Length;
+            string BackgroundImagesFolder= CurrentDirectory.Remove(CurrentDirectoryLength - 10, 10);
+            BackgroundImages = new List<Card>();
+            BackgroundImages.Add(new Card() { Path = BackgroundImagesFolder + "\\Resources\\Card1.png" });
+            BackgroundImages.Add(new Card() { Path = BackgroundImagesFolder + "\\Resources\\Card2.png" });
+            BackgroundImages.Add(new Card() { Path = BackgroundImagesFolder + "\\Resources\\Card3.png" });
+            BackgroundImages.Add(new Card() { Path = BackgroundImagesFolder + "\\Resources\\Card4.png" });
+            BackgroundImages.Add(new Card() { Path = BackgroundImagesFolder + "\\Resources\\Card5.png" });
+            BackgroundImages.Add(new Card() { Path = BackgroundImagesFolder + "\\Resources\\Card6.png" });
+            BackgroundImages.Add(new Card() { Path = BackgroundImagesFolder + "\\Resources\\Card7.png" });
+            BackgroundImages.Add(new Card() { Path = BackgroundImagesFolder + "\\Resources\\Card8.png" });
+            BackgroundImages.Add(new Card() { Path = BackgroundImagesFolder + "\\Resources\\Card9.png" });
+            BackgroundImages.Add(new Card() { Path = BackgroundImagesFolder + "\\Resources\\Card10.png" });
+            BackgroundImages.Add(new Card() { Path = BackgroundImagesFolder + "\\Resources\\Card11.png" });
+            BackgroundImages.Add(new Card() { Path = BackgroundImagesFolder + "\\Resources\\Card12.png" });
+            BackgroundImages.Add(new Card() { Path = BackgroundImagesFolder + "\\Resources\\Card13.png" });
+            BackgroundImages.Add(new Card() { Path = BackgroundImagesFolder + "\\Resources\\Card14.png" });
+            BackgroundImages.Add(new Card() { Path = BackgroundImagesFolder + "\\Resources\\Card15.png" });
+            BackgroundImages.Add(new Card() { Path = BackgroundImagesFolder + "\\Resources\\Card16.png" });
+            BackgroundImages.Add(new Card() { Path = BackgroundImagesFolder + "\\Resources\\Card17.png" });
+            BackgroundImages.Add(new Card() { Path = BackgroundImagesFolder + "\\Resources\\Card18.png" });
         }
 
         private void frm_MemoryGame_Load(object sender, EventArgs e)
